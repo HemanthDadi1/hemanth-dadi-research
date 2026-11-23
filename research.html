@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Research | Hemanth Dadi</title>
+<meta name="description" content="Conformal prediction intervals for remaining useful life at the level of individual engines.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<a class="name" href="index.html">Hemanth Dadi</a>
+<nav aria-label="Main">
+<a href="index.html">Home</a>
+<a href="research.html" aria-current="page">Research</a>
+<a href="projects.html">Projects</a>
+<a href="cv.html">CV</a>
+</nav>
+</header>
+<main id="main">
+<h1>Engine-level reliability of conformal RUL intervals</h1>
+<p class="lead">A prediction interval is only useful for a maintenance decision if its stated reliability holds for the engine being decided on. I test whether it does, using NASA's C-MAPSS turbofan data under changing operating conditions.</p>
+
+<div class="card">
+<p class="meta">Part I · Under review, Journal of Reliability Science and Engineering (IOP Publishing)</p>
+<h3>Conformal RUL uncertainty under operating-condition shift</h3>
+<p>Title and code are withheld during double-anonymous review.</p>
+<ul>
+<li>Pooled coverage hides unit-level failure: 82% coverage against an 80% target, while 10 of 24 test engines fell below it (worst engine 45%).</li>
+<li>I propose Balanced Engine CQR, a calibration rule applied engine by engine. Under two operating-condition shifts it held 91 to 92% coverage and cut under-covered engines from 23 of 38 to 8 and 7.</li>
+<li>Width-matched baselines show the gain comes from wider intervals. That is a cost-versus-reliability trade-off for maintenance planning, not a free improvement.</li>
+<li>Remaining failures trace to point-prediction error in mid-life. Engine coverage correlates with engine error (r = −0.95 and −0.85). Findings replicate on FD002.</li>
+</ul>
+</div>
+
+<div class="card">
+<p class="meta">Part II · In preparation</p>
+<h3>Does a longer temporal context help?</h3>
+<ul>
+<li>Changing only the input window from 30 to 60 cycles, under-covered engines fell in 9 of 10 seed pairs under shift (sign test p ≈ 0.004), but single-seed results pointed both ways.</li>
+<li>While writing it I found that my earlier results had overstated the improvement by 1.7 to 6.6 times, and I report the corrected estimates.</li>
+</ul>
+<p><a href="https://github.com/HemanthDadi1/fd004-degradation-aware-rul">Code and results</a></p>
+</div>
+
+<h2>Method</h2>
+<p>Frozen, pre-specified pipeline, engine-level data splits, five seeds, and no tuning on test data. I report negative results and the cases where a single seed would have misled.</p>
+
+<h2>Where I want to take it</h2>
+<p>Put calibrated engine-level intervals inside the scheduling optimization, using robust or chance-constrained formulations, and test whether the schedule stays safe on engines it was never tuned on. In my earlier scheduler the buffers that prevented failures also gave up about 11 cycles of useful life per engine. I want to find where that trade-off is actually optimal.</p>
+</main>
+<footer>
+<a href="mailto:hemanthdadi3@gmail.com">hemanthdadi3@gmail.com</a> · <a href="https://github.com/HemanthDadi1">GitHub</a> · <a href="https://www.linkedin.com/in/hemanth-d-0b95a5201/">LinkedIn</a>
+</footer>
+</body>
+</html>
